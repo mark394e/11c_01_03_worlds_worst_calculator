@@ -10,11 +10,14 @@ function start() {
   firstNumber.value;
   secondNumber.value;
   readOperator.value;
-
-  let firstNumberAsNumber = parseInt(firstNumber.value);
-  let secondNumberAsNumber = parseInt(secondNumber.value);
   //   console.log(readOperator.value);
   document.querySelector("#calculate").addEventListener("click", clickCalculate);
 }
 
-function clickCalculate() {}
+function clickCalculate() {
+  let firstNumberAsNumber = parseInt(firstNumber.value);
+  let secondNumberAsNumber = parseInt(secondNumber.value);
+  firstNumber.value = firstNumberAsNumber + secondNumberAsNumber;
+  secondNumber.value = "";
+  start();
+}
