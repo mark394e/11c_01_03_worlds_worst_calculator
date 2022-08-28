@@ -10,6 +10,7 @@ function start() {
   firstNumber.value;
   secondNumber.value;
   readOperator.value;
+
   //   console.log(readOperator.value);
   document.querySelector("#calculate").addEventListener("click", clickCalculate);
 }
@@ -17,7 +18,16 @@ function start() {
 function clickCalculate() {
   let firstNumberAsNumber = parseInt(firstNumber.value);
   let secondNumberAsNumber = parseInt(secondNumber.value);
-  firstNumber.value = firstNumberAsNumber + secondNumberAsNumber;
+  console.log(readOperator.value);
+  if (readOperator.value == "add") {
+    firstNumber.value = firstNumberAsNumber + secondNumberAsNumber;
+  } else if (readOperator.value == "sub") {
+    firstNumber.value = firstNumberAsNumber - secondNumberAsNumber;
+  } else if (readOperator.value == "mul") {
+    firstNumber.value = firstNumberAsNumber * secondNumberAsNumber;
+  } else if (readOperator.value == "div") {
+    firstNumber.value = firstNumberAsNumber / secondNumberAsNumber;
+  }
   secondNumber.value = "";
   start();
 }
