@@ -14,6 +14,7 @@ function start() {
   secondNumber.value;
   readOperator.value;
   document.querySelector("#calculate").addEventListener("click", clickCalculate);
+  document.querySelector("#clear").addEventListener("click", clearResults);
 }
 
 function clickCalculate() {
@@ -44,4 +45,10 @@ function clickCalculate() {
   }
   secondNumber.value = "";
   start();
+}
+
+function clearResults() {
+  while (resultList.firstChild) {
+    resultList.removeChild(resultList.firstChild);
+  }
 }
