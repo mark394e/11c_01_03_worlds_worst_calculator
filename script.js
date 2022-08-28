@@ -67,7 +67,6 @@ function clickCalculate() {
 function roundNumber(_result) {
   // defines the value of the decimals in the "round to"-dropdown
   let roundValue = document.querySelector("#decimals").value;
-  console.log(roundValue);
 
   //   show the result with x amount of decimals depending on which "round to"-number you chose in the dropdown
   if (roundValue === "0") {
